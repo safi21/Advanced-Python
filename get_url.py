@@ -1,3 +1,4 @@
+# This program collects all urls of a given website using regular expression and saves them in a csv file
 import requests
 import re
 

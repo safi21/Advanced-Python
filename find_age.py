@@ -1,3 +1,4 @@
+# This program takes two inputs, name and date of birth and gives the age of the person as an output.
 import datetime
 
 class Person:

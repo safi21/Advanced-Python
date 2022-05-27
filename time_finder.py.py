@@ -1,3 +1,4 @@
+#This program takes a city as an input and shows local time of that city.
 from datetime import datetime
 import pytz
 
