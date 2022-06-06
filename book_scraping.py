@@ -31,7 +31,7 @@ def get_book_name(content):
 def get_img(content):
     img_pattern = re.compile('<img src="(.*?)"')
     img = re.findall(img_pattern, content)
-    return "https://books.toscrape.com/" + img[0]#[6:]
+    return "https://books.toscrape.com/" + img[0][6:]
 
 
 #price
@@ -85,12 +85,12 @@ def scrap():
     for url in urls:
         content = download_content(url)
         links = extract_links(content)
-        # to check if the code is running properly.
-        print(url)
+        
 
         for link in links:
             page_content = download_content(link)
-
+            # to check if the code is running properly.
+            print(link)
             name = get_book_name(page_content)
             img = get_img(page_content)
             price = get_price(page_content)
