@@ -31,7 +31,7 @@ def get_book_name(content):
 def get_img(content):
     img_pattern = re.compile('<img src="(.*?)"')
     img = re.findall(img_pattern, content)
-    return "https://books.toscrape.com/" + img[0][6:]
+    return "https://books.toscrape.com/" + img[0]#[6:]
 
 
 #price
@@ -80,7 +80,7 @@ def save_to_file(filename='data.json', data=''):
 
 def scrap():
     base_url = 'https://books.toscrape.com/catalogue/'
-    urls = [f"{base_url}page-{i}.html" for i in range(1, 51)]
+    urls = [f"{base_url}page-{i}.html" for i in range(2, 51)]
 
     for url in urls:
         content = download_content(url)
