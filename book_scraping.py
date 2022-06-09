@@ -31,7 +31,7 @@ def get_book_name(content):
 def get_img(content):
     img_pattern = re.compile('<img src="(.*?)"')
     img = re.findall(img_pattern, content)
-    return "https://books.toscrape.com/" + img[0][6:]
+    return img[0][6:]
 
 
 #price
