@@ -12,7 +12,7 @@ def download_content(url):
     contents = r.text
     return html.unescape(contents)
 
-
+# extracts individual books link
 def extract_links(contents):
     url_pattern = re.compile('<h3>.*?<a href="(.*?)"')
     results = re.findall(url_pattern, contents)
@@ -50,6 +50,7 @@ def get_upc(content):
 
 def write_skeleton(filename):
     skel = """{
+        
     "Book Details": [
         
     ]
