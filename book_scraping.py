@@ -91,14 +91,15 @@ def scrap():
         for link in links:
             page_content = download_content(link)
             # to check if the code is running properly.
+            print(link)
             name = get_book_name(page_content)
-            '''img = get_img(page_content)
+            img = get_img(page_content)
             price = get_price(page_content)
             upc = get_upc(page_content)
 
             data = {'Name': name, 'Price (Pounds)': price, 'UPC': upc, 'Cover': img}
 
-            save_to_file(data=data)'''
+            save_to_file(data=data)
 
 
 if __name__ == "__main__":
